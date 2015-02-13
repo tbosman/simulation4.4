@@ -2,7 +2,11 @@ package org.vu.tbosman.simulation;
 
 import java.io.FileWriter;
 import java.io.IOException;
-
+/**
+ * Main class for option price calculation for the European/Asian variety 
+ * Type of price process can be controlled by uncommenting relevant lines in simulatedOptionPrice() method
+ * @author tbosman 
+ */
 public class OptionPricer {
 
 	RandomSimulator sim;
@@ -16,6 +20,7 @@ public class OptionPricer {
 		double[] aPrices = new double[N];
 		
 		for(int i=0; i<N; i++) {
+// 			Simulation params for heston model.
 			double[][] S_V = sim.simulateHeston(S0, period, rate-dividend, vola, (1.0/250)); 
 			double[] GBM = S_V[0];
 			//Uncomment for GBM simulation

@@ -41,7 +41,7 @@ public class RandomSimulator {
 		double[] S = new double[M]; 
 		double[] V = new double[M]; 
 		S[0] = S0; 
-		V[0] = initVola; 
+		V[0] = initVola*initVola; 
 		
 		//##Constants##	
 		double KAPPA = 2; 
